@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #006e7f;
+  --secondary-color: #eeeeee;
+  --tertiary-color: #dddddd;
+
+  --helper-color-1: #a1e3d8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin: 3rem;
+}
+
+.select-files-input-box {
+  max-width: 60vw;
+  height: 7rem;
+  border: 2px solid;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  border: 3px dashed var(--tertiary-color);
+  border-radius: 25px;
+  display: none;
+  position: relative;
+}
+
+.select-files-input-box input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  opacity: 0%;
+}
+
+.input-descript {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dropin-box {
+  text-align: center;
+  max-width: 60vw;
+  height: 7rem;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  border: 3px dashed var(--tertiary-color);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.files-box {
+  max-width: 55rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.file-box .file-preview-box {
+  border: 2px solid var(--tertiary-color);
+  width: 180px;
+  height: 200px;
+  padding: 0.3rem;
+  /* overflow: hidden; */
+}
+
+.file-box .file-preview-box img,
+.file-box .file-preview-box embed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.file-box .file-details-box {
+  font-size: 0.8rem;
+}
+
+.file-name-box,
+.file-size-box,
+.file-date-box {
+  margin-top: 0.1rem;
+  width: 180px;
+}
+
+.file-name-label,
+.file-size-label,
+.file-date-label {
+  background-color: var(--primary-color);
+  color: #fff;
+  display: inline-block;
+  margin: 0.05rem 0.3rem;
+  padding: 0.1rem 0.2rem;
+}
+
+.active-drag {
+  background-color: var(--helper-color-1);
+  border-color: var(--primary-color);
+}
